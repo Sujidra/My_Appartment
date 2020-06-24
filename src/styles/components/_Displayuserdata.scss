@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.appbody{
+    width: 100%;
+}
+
+.displayuser{
+    width: 100%;
+    box-sizing: border-box;
+    height: auto;
+    background-color: white;
+    margin-top: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-bottom: 8px;
+    //border:1.5px solid #0000001e;
+    box-shadow: 2px 2px #0000001e ;
+}
+
+
+.userprofile{
+    width:50;
+    //height:50;
+    float: left;
+    padding-top: 5px;
+}
+.username{
+    float: left;
+    margin: 0;
+    padding-left: 10px;
+    padding-top: 10px;
+    line-height: 1.2;
+    font-family: 'Roboto', sans-serif;
+}
+.flatno{
+    @extend .username;
+    color:$secondary;
+    font-size: 15px;
+    padding:0;
+    margin:2px;
+}
+.postingtime{
+    float: right;
+    margin: 0;
+    padding-top: 10px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    color:#00000061;
+    
+}
+.clockimg{
+    width:12;
+    //height:12;
+    //padding-top: 5px;
+}
+.usertitle{
+    padding-top: 65px;
+    font-size: 20px;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color:$primary;
+    font-weight: 400;
+    //font-family: 'Patua One', cursive;
+    //font-family: Arial, Helvetica, sans-serif;
+}
+.usercontent{
+    margin:0;
+    padding-top: 10px;
+    line-height: 1.5;
+    font-family: 'Roboto', sans-serif;
+    color:$secondary;
+    font-size: 16px;
+    
+
+}
+.buttons{
+    margin-top: 16;
+    padding-top: 8;
+    font-family: 'Roboto', sans-serif;
+    color: #0000008a;
+    border-top: 1px solid #3333331e;
+    margin-left: -16px;
+    margin-right: -16px;
+}
+.comment{
+    height: 35;
+    border:0px ;
+    border-radius:10px;
+    background-color:white;
+    font-family: 'Roboto', sans-serif;
+    color:$secondary;
+    font-weight: 100px;
+    margin-left: 10px;
+    margin-right:10px;
+    cursor:pointer;
+    
+}
+.comtimg{
+    vertical-align: super;
+    font-size: 16px !important;
+    font-weight: 600;
+    color:#00000061;
+    //width: 14px;
+    //height: 14px;
+    
+}
+.like{
+    @extend .comment;
+    //margin-left: 10px;
+}
+
+@media only screen and (max-width: 500px){
+.userprofile {
+    width: 16%;
+    height: auto;
+}
+}

@@ -1,0 +1,122 @@
+.bg-model{
+    width: 100%;
+    height: 100%;
+    //background-color: rgba(0,0,0,0.7);
+    position:absolute;
+    top:0;
+}
+.groupmodel{
+    background-color: white;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    margin-top: 10px;
+    padding-bottom: 20px;
+    /* position: fixed; */
+    /* top: 60px; */
+    /* left: 25%; */
+    border-radius: 5px;
+    //box-shadow: 0 0 7px 7px rgba(0,0,0,0.5);
+}
+.groupModelHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    p{
+        margin: 0;
+    }
+    background: $theme-color;
+    height: 50px;
+    
+}
+.groupclose{
+    border: none;
+    background-color: $theme-color ;
+    font-weight: 200;
+    color: white;
+    cursor: pointer;
+}
+.groupbody{
+    margin: 0 50px;
+    margin-bottom: 50px;
+    
+}
+.groupname{
+    display: flex;
+    margin-top: 35px;
+}
+.groupnamehead{
+    font-weight: bold;
+    width: 130px;
+    font-family: 'Roboto', sans-serif;
+    color:$primary;
+    margin: 0;
+}
+.groupNameInput{
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10;
+    width: 90%;
+
+}
+.groupnametext{
+    height: 40px;
+    width: 100%;
+    border:1px solid rgb(189, 186, 186);
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+.groupnametext::-webkit-input-placeholder{
+    font-family: 'Roboto', sans-serif;
+    color:$secondary;
+    font-size: 18px;
+}
+.groupnamerule{
+    width:100%;
+    font-family: 'Roboto', sans-serif;
+    color:#00000061;
+    margin: 0;
+    font-size: 17px;
+    margin-top: 5px;
+}
+
+.groupDescriptionHead{
+    @extend .groupnamehead;
+    width: 130px;
+}
+.groupDescriptionText{
+    @extend .groupnametext;
+    height: 150px;
+    width: 530;
+    padding-top: 10px;
+}
+.groupRadioInput{
+    display: flex;
+}
+.radiooption{
+    margin-left: 30px;
+    font-style: bold;
+}
+.radiolabel{
+    font-weight: 400;
+    font-family:'Roboto', sans-serif;
+    color:$primary;
+}
+.groupbuts{
+    margin-left: 145px;
+    margin-top: 25px;
+}
+.groupbut{
+    @extend .groupbutton;
+    margin-left: 20px;
+}
+.groupbutcancel{
+    @extend .groupbut;
+    background: gray;
+}

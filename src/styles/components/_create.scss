@@ -1,0 +1,94 @@
+.createbox{
+    width: 100%;
+    height: auto;
+    background: white;
+    padding:20px;
+    border:1px solid #0000001e;
+}
+.post{
+    margin:0;
+    padding-left: 5px;
+    font-family: 'Roboto', sans-serif;
+    color:$primary;
+    font-size: 24px;
+    padding-bottom: 5px;
+    border-bottom: 5px solid $theme-color;
+    margin-right: 86.5%;
+}
+
+.inputtitle{
+    width: 100%;
+    border:1px solid rgb(146, 143, 143);     
+    margin-top: 15;
+    height: 45px;
+    padding-left: 10px;
+    padding-top: 5px;
+    font-size: 20px;
+    
+}
+.inputtitle::-webkit-input-placeholder{
+    font-family: 'Roboto', sans-serif;
+    color:$secondary;
+    font-size: 24px;
+   
+}
+.posttextarea{
+    margin-top: 25px;
+    width: 100%;
+    height: 250px;
+    padding:10;
+    font-size: 20px;
+    border:1px solid rgb(146, 143, 143);
+}
+.posttextarea::-webkit-input-placeholder{
+    font-family: 'Roboto', sans-serif;
+    color:$secondary;
+    font-size: 18px;
+
+}
+.visibleto{
+    margin-top: 20px;
+    display: flex;
+    p{
+        padding-top: 5px;
+        margin:0;
+        font-size: 18px;
+        font-family: 'Roboto', sans-serif;
+        color:$primary;
+    
+    }
+}
+.visiblecheck{
+    margin-left:5;
+    padding-left: 10px;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    color:$secondary;
+    font-size: 15px;
+    
+}
+.postbutton{
+    display: flex;
+    margin-top: 15px;
+}
+.createbottom{
+    display: flex;
+    justify-content: space-between;
+}
+.createimg{
+    width:27;
+    height: 18px;
+}
+.attachmentbutton{
+    border: none;
+    background: white;
+    cursor: pointer;
+    margin-bottom: 4;
+}
+.attachmentimg{
+    margin-top: 6;
+    width: 27px;
+    height: 25px;
+}

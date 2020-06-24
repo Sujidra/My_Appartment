@@ -1,0 +1,76 @@
+.photobut{
+    @extend .groupbutton;
+    width:100%
+}
+.photocontent{
+    background:white;
+    height:240px;
+    width:47%;
+    
+}
+.photoimg{
+    height:200px;
+    width:100%;
+    border:none;
+}
+.photoImgbutton{
+    background: none;
+    //border: 1px solid #00000061;
+    padding:0;
+    cursor: pointer;
+}
+.bottomcontent{
+    display:flex;
+    justify-content:space-between;
+    height:40px;
+    align-items:center;
+    padding-left:10px;
+    padding-right:10px;
+    
+}
+.bottomtitle{
+        margin:0;
+        font-size:18px;
+        color:grey
+        b{
+            font-size:15px;
+            color:black;
+        }
+    }
+.bottomtime{
+        margin:0;
+        color:grey;
+        font-size:11px;
+        font-weight:200px
+    }
+
+.clockimgbottom{
+    width: 10;
+    height: 10px;
+    padding-top: 5px;
+}
+.horiset{
+    display:flex;
+    justify-content:space-between;
+    margin-top:10px;
+}
+.photos{
+    margin-top:20px;
+    display:flex;
+    flex-direction:column;
+}
+
+@media only screen and (max-width: 500px){
+.photoimg {
+    height: 130;
+}
+.horiset {
+height: 175;
+}
+.bottomtime {
+display: none;
+}
+.photos {
+    margin-top: 0;
+}
+}

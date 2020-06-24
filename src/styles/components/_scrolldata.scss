@@ -1,0 +1,67 @@
+#totalbody{
+    width: 100%;
+}
+.scrolldata{
+    margin-left:23%;
+    height: auto;
+    width: 58%;
+    background-color: none;
+    box-sizing:border-box;
+    position: relative;
+    margin-top:60;
+    padding-bottom: 40px;
+}
+.scrolldataOnScroll{
+    @extend .scrolldata;
+    margin-top: 130;
+    
+    transition: all 0.25s linear ;
+}
+
+.conversationscrolldata{
+    @extend .scrolldata;
+    margin-top: 150;
+    transition: all 0.25s linear ;
+}
+
+.converationscrolldataOnScroll{
+    @extend .conversationscrolldata;
+    margin-top: 150;
+    transition: all 0.25s linear ;
+}
+.userscrolldata{
+    @extend .conversationscrolldata;
+    width: 75%;
+    margin-top: 120px;
+    padding-top: 20px;
+    margin-left: 18%;
+    transition: all 0.25s linear ;
+}
+
+.userscrolldataOnScroll{
+    @extend .userscrolldata;
+    margin-top: 100;
+    transition: all 0.25s linear ;
+}
+.payscrolldata{
+    @extend .userscrolldata;
+    width: 58%;
+    margin-top: 120px;
+    margin-left: 23%;
+}
+.payscrolldataOnScroll{
+    @extend .userscrolldataOnScroll;
+    width: 58%;
+    margin-top: 100;
+    margin-left: 23%;
+}
+
+@media only screen and (max-width: 500px){
+.scrolldata {
+    margin-left: 5%;
+    width: 90%;
+}
+.conversationscrolldata{
+    margin-top: 100;
+}
+}

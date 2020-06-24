@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+
+.bodyarea{
+    width: 100%;
+    height: auto;
+    margin:0;
+    padding-top:10px;
+    padding-bottom: 20px;
+    color: rgba(0, 0, 0, 0.87);
+    overflow: hidden;
+    
+}
+.desktop_nav{
+    top:100;
+    z-index: 0;
+    position:fixed;
+    width: 18%;
+    
+}
+.desktop_navOnScroll{
+    @extend .desktop_nav;
+    top:150;
+    transition: all 0.25s linear ;
+}
+.mobile_nav{
+    @extend .desktop_nav;
+    transition: all 0.25s linear ;
+    top:0;
+    z-index: 3;
+    width:90%;
+    
+}
+.menu{
+    float: left;
+    //width: 90%;
+    margin-left: 0;
+    padding-bottom: 20%;
+    position: fixed;
+    width:18%;
+    left:-100%;
+    opacity:0;
+    transition: all 0.25s linear ;
+    
+}
+.mobile_nav .menu{
+    @extend .menu;
+    width:90%;
+    
+    background-color: white;
+}
+
+.menu_navopen{
+    @extend .menu;
+    left:0px;
+    opacity:1;
+    transition: all 0.25s linear;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 0rem;
+    margin: 0;
+    height: auto;
+}
+ul li{
+width:100%;
+margin-top: 3px;
+height: 53px;
+padding-top:11;  
+//border-bottom: 1px solid #3333331e;  
+//border-right: 1px solid  #3333331e;   
+}
+ul li:hover{
+    
+    
+        
+}
+.closebuttonli_open{
+    display: block;
+}
+.closebuttonli_close{
+    display: none;
+}
+.navimgclose{
+    border: 0px white;
+    color:white;
+    background-color: white;
+    width:20px;
+    margin-left:85%;
+    cursor: pointer;
+    color: black;
+    
+                     
+}
+
+li:hover .navtitle{
+    color: $theme-color;
+    font-weight: 500;
+}
+
+.Navactive{
+    li{
+        background: rgba(66,133,244,0.149); 
+        border-radius: 0 50px 50px 0;  
+    }
+}
+.navli {
+    li{
+        
+    }
+}
+
+.navim{
+    float:left;
+    margin-left: 25px;
+    width:26;
+    height:26;
+    
+}
+.navim1{
+    float:left;
+    margin-left: 25px;
+    margin-top: 6px;
+    width:26;
+    height:18;
+    color: gray;
+    
+}
+.navtitle{
+    float: left;
+    margin-left: 25px;
+    visibility: visible;
+    opacity: 1;
+    transition:all 0.11s linear;
+    //transition-delay: 0s;
+    margin-top:2px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color:$primary;
+    text-align: justify;
+    font-size: 14px;
+    font-weight:400; 
+        
+}
+.navtitle_navopen{
+    @extend .navtitle;
+    visibility:visible;
+    opacity:1;
+    transition:all 0.11s linear;
+    transition-delay:0.175s;
+    margin-top:7px;
+                            
+}
+.navtit{
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color:$primary;
+    
+    text-align: justify;
+    font-size: 16px;
+    font-weight:400;    
+
+}
+.smallimg{
+    width: 10px;
+    height: 10px;
+    padding-left: 10;
+}
+.smallimgsocial{
+    @extend .smallimg;
+
+    padding-left: 20px;
+}
+
+@media only screen and (max-width: 900px){
+    .bodyarea{
+        margin-top: 134px;
+    }
+}
+@media only screen and (max-width: 500px){
+.bodyarea {
+    margin-top: 35px;
+}
+}

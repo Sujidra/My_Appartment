@@ -1,0 +1,62 @@
+.noticemodel{
+    @extend .groupmodel;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+}
+.noticeModelHead{
+    @extend .groupModelHead;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.noticeRadioInput{
+    margin-top: 15px;
+
+}
+.noticeinput{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.noticenamehead{
+    @extend .albumnamehead;
+    width: 400;
+}
+.albumnametext{
+    margin-top: 5px;
+    width: 100%;
+    height: 40px;
+    //border:1px solid rgb(189, 186, 186);
+}
+.noticeradiooption{
+    margin-top: 5px;
+}
+.noticetimeinput{
+    @extend .albumnametext;
+    width: 100%;
+}
+.noticeinputright{
+    @extend .noticeinput;
+    margin-left: 25px;
+}
+.partision{
+    display: flex;
+}
+.noticeRecipiant{
+    @extend .noticetimeinput;
+    border-radius:0;
+    font-family: 'Roboto', sans-serif;
+    color:$secondary;
+    
+}
+.noticebuts{
+    @extend .groupbuts;
+    margin-top: 10px;
+    margin-left: 1050px;
+}
+.noticetimeinput::placeholder{
+    @extend .groupnametext::-webkit-input-placeholder
+}

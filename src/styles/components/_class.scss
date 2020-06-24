@@ -1,0 +1,264 @@
+.splitrows{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.halfcontent{
+    width: 49%;
+}
+.input-group-icon {
+    position: relative;
+}
+
+.input-icon {
+    position: absolute;
+    font-size: 18px;
+    color: #999;
+    right: 18px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.uploadexcel{
+  margin-left: 90%;
+  display: inline-block;
+  padding-top: 12;
+  color: $theme-color;
+  text-decoration: underline;
+}
+
+.uploadexceltext {
+  
+  margin-left: 75%;
+}
+
+.classtabletitle{
+  padding-bottom: 0;
+}
+
+
+
+td.active {
+    background-color: #2c6ed5;
+  }
+  
+  input[type="date" i] {
+    padding: 14px;
+  }
+  
+  .table-condensed td, .table-condensed th {
+    font-size: 14px;
+    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+    font-weight: 400;
+  }
+  
+  .daterangepicker td {
+    width: 40px;
+    height: 30px;
+  }
+  
+  .daterangepicker {
+    border: none;
+    -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+    display: none;
+    border: 1px solid #e0e0e0;
+    margin-top: 5px;
+  }
+  
+  .daterangepicker::after, .daterangepicker::before {
+    display: none;
+  }
+  
+  .daterangepicker thead tr th {
+    padding: 10px 0;
+  }
+  
+  .daterangepicker .table-condensed th select {
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 14px;
+    padding: 5px;
+    outline: none;
+  }
+
+  .tablesearch{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+
+  .usersearch-box1{
+    @extend .usersearch-box;
+  }
+
+.usersearch-box1 .input-group{
+    min-width: 250px;
+    max-width: 270;
+    position: absolute;
+    right: 0;
+}
+
+
+.usersearch-box2{
+  @extend .usersearch-box;
+}
+
+.usersearch-box2 .input-group{
+  min-width: 150px;
+  max-width: 170;
+  position: absolute;
+  right: 0;
+}
+
+
+  .react-tags {
+    position: relative;
+    padding: 6px 0 0 6px;
+    border: 1px solid #D1D1D1;
+    border-radius: 1px;
+  
+    /* shared font styles */
+    font-size: 1em;
+    line-height: 1.2;
+  
+    /* clicking anywhere will focus the input */
+    cursor: text;
+  }
+  
+  .react-tags.is-focused {
+    border-color: #B1B1B1;
+  }
+  
+  .react-tags__selected {
+    display: inline;
+  }
+  
+  .react-tags__selected-tag {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0 6px 6px 0;
+    padding: 6px 8px;
+    border: 1px solid #D1D1D1;
+    border-radius: 2px;
+    background: #F1F1F1;
+  
+    /* match the font styles */
+    font-size: inherit;
+    line-height: inherit;
+  }
+  
+  .react-tags__selected-tag:after {
+    content: '\2715';
+    color: #AAA;
+    margin-left: 8px;
+  }
+  
+  .react-tags__selected-tag:hover,
+  .react-tags__selected-tag:focus {
+    border-color: #B1B1B1;
+  }
+  
+  .react-tags__search {
+    display: inline-block;
+  
+    /* match tag layout */
+    padding: 7px 2px;
+    margin-bottom: 6px;
+  
+    /* prevent autoresize overflowing the container */
+    max-width: 100%;
+  }
+  
+  @media screen and (min-width: 30em) {
+  
+    .react-tags__search {
+      /* this will become the offsetParent for suggestions */
+      position: relative;
+    }
+  
+  }
+  
+  .react-tags__search input {
+    /* prevent autoresize overflowing the container */
+    max-width: 100%;
+  
+    /* remove styles and layout from this element */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+  
+    /* match the font styles */
+    font-size: inherit;
+    line-height: inherit;
+  }
+  
+  .react-tags__search input::-ms-clear {
+    display: none;
+  }
+  
+  .react-tags__suggestions {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  
+  @media screen and (min-width: 30em) {
+  
+    .react-tags__suggestions {
+      width: 240px;
+    }
+  
+  }
+  
+  .react-tags__suggestions ul {
+    margin: 4px -1px;
+    padding: 0;
+    list-style: none;
+    background: white;
+    border: 1px solid #D1D1D1;
+    border-radius: 2px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  .react-tags__suggestions li {
+    border-bottom: 1px solid #ddd;
+    padding: 6px 8px;
+  }
+  
+  .react-tags__suggestions li mark {
+    text-decoration: underline;
+    background: none;
+    font-weight: 600;
+  }
+  
+  .react-tags__suggestions li:hover {
+    cursor: pointer;
+    background: #eee;
+  }
+  
+  .react-tags__suggestions li.is-active {
+    background: #b7cfe0;
+  }
+  
+  .react-tags__suggestions li.is-disabled {
+    opacity: 0.5;
+    cursor: auto;
+  }
+  .tablesearch{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  
+  

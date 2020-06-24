@@ -1,0 +1,23 @@
+.albummodel{
+    @extend .groupmodel;
+    left:300;
+    width: 820;
+    height: 420;
+    border-radius: 10px;
+}
+.albumnamehead{
+    @extend .groupnamehead;
+    width: 140;
+}
+.albumDescriptionHead{
+    @extend .groupDescriptionHead;
+    width: 140;
+}
+.albumbuts{
+    @extend .groupbuts;
+    margin-left: 155px;
+}
+.albumnametext{
+    @extend .groupnametext;
+    width: 560;
+}
