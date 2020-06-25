@@ -12,10 +12,38 @@ const Users =(props)=>{
         
     });
     const [selectedValue, setSelectedValue] = React.useState('a');
+    const [classSelected,changeClass]=React.useState("select");
 
+    
     const handleChange = (event) => {
     setSelectedValue(event.target.value);
     };
+
+    const ClassHandle = (event) => {
+        changeClass(event.target.value);
+        setTimeout(()=>{console.log(classSelected);},0.5)
+        
+    };
+    let studentoptions=[]
+    if(classSelected==="select"){
+        studentoptions=["","","",""]
+    }
+    else if(classSelected==="6"){
+        studentoptions=["Anju","Priya","Ravi","Malathi"]
+    }else if(classSelected==="7"){
+        studentoptions=["Murali","Kannen","Ramu","Hari"]
+
+    }else if(classSelected==="8"){
+        studentoptions=["Vijay","Sriram","Janu","Gomathi"]
+
+    }else if(classSelected==="9"){
+        studentoptions=["Madhu","Kanishka","Rahul","Manohar"]
+
+    }else if(classSelected==="7"){
+        studentoptions=["Dinesh","Kannen","Annapoorani","Sindhu"]
+
+    }
+
 
     const myFunction=()=>{
         let x = document.getElementById("myInput");
@@ -159,29 +187,93 @@ const Users =(props)=>{
                 <div id="addEmployeeModal" class="modal fade">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <form>
+                            <form>  
                                 <div class="modal-header">						
-                                    <h4 class="modal-title">Add User</h4>
+                                    <h4 class="modal-title">Add User Details</h4>
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                 </div>
-                                <div class="modal-body">					
+                                <div class="modal-body">
                                     <div class="form-group">
-                                        <label>Name</label>
-                                        <input type="text" class="form-control" required/>
+                                        <div className="splitrows">
+                                            <div className="halfcontent">
+                                                <label for="sel1">Current Group</label>
+                                                <select class="form-control" id="sel1" onChange={(e)=>{changeClass(e.target.value);console.log(classSelected)}} value={classSelected}>
+                                                    <option  value="select">Select</option>
+                                                    <option value="6">6</option>
+                                                    <option value="7">7</option>
+                                                    <option value="8">8</option>
+                                                    <option value="9">9</option>
+                                                    <option value="10">10</option>
+                                                </select>
+
+                                            </div>
+                                            <div className="halfcontent">
+                                                <label>Student Name</label>
+                                                <select class="form-control" id="student" /*onChange={(e)=>{changeClass(e.target.value);console.log(classSelected)}} value={classSelected}*/>
+                                                    <option value={`${studentoptions[0]}`}>{`${studentoptions[0]}`}</option>
+                                                    <option value={`${studentoptions[1]}`}>{`${studentoptions[1]}`}</option>
+                                                    <option value={`${studentoptions[2]}`}>{`${studentoptions[2]}`}</option>
+                                                    <option value={`${studentoptions[3]}`}>{`${studentoptions[3]}`}</option>
+                                                    
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <div className="splitrows">
+                                            <div className="halfcontent">
+                                                <label>Father's Name</label>
+                                                <input type="text" class="form-control" required/>
+                                            </div>
+                                            <div className="halfcontent">
+                                                <label>Father's Occupation</label>
+                                                <input type="text" class="form-control" required/>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-group">
-                                        <label>Email</label>
-                                        <input type="email" class="form-control" required/>
+                                        <div className="splitrows">
+                                            <div className="halfcontent">
+                                                <label>Father's Email</label>
+                                                <input type="email" class="form-control" required/>
+                                            </div>
+                                            <div className="halfcontent">
+                                                <label>Father's Phone</label>
+                                                <input type="number" class="form-control" required/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div className="splitrows">
+                                            <div className="halfcontent">
+                                                <label>Mother's Name</label>
+                                                <input type="text" class="form-control" required/>
+                                            </div>
+                                            <div className="halfcontent">
+                                                <label>Mother's Occupation</label>
+                                                <input type="text" class="form-control" required/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div className="splitrows">
+                                            <div className="halfcontent">
+                                                <label>Mother's Email</label>
+                                                <input type="email" class="form-control" required/>
+                                            </div>
+                                            <div className="halfcontent">
+                                                <label>Mother's Phone</label>
+                                                <input type="number" class="form-control" required/>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="form-group">
                                         <label>Address</label>
                                         <textarea class="form-control" required></textarea>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Phone</label>
-                                        <input type="text" class="form-control" required/>
-                                    </div>					
-                                </div>
+                                                    
+                                </div>   
                                 <div class="modal-footer">
                                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"/>
                                     <input type="submit" class="btn btn-color" value="Add"/>
@@ -194,52 +286,102 @@ const Users =(props)=>{
                 <div id="editEmployeeModal" class="modal fade">
                     <div class="modal-dialog">
                         <div class="modal-content">
-                            <form>
+                            <form>  
                                 <div class="modal-header">						
-                                    <h4 class="modal-title">Edit User</h4>
+                                    <h4 class="modal-title">Edit User Details</h4>
                                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                 </div>
                                 <div class="modal-body">
+                                                        
                                     <div class="form-group">
-                                        <div>
-                                            <Radio
-                                                checked={selectedValue === 'a'}
-                                                onChange={handleChange}
-                                                value="a"
-                                                name="radio-button-demo"
-                                                label="Male"
-                                                inputProps={{ 'aria-label': 'A' }}
-                                            />Active
-                                            <Radio
-                                                checked={selectedValue === 'b'}
-                                                onChange={handleChange}
-                                                value="b"
-                                                name="radio-button-demo"
-                                                inputProps={{ 'aria-label': 'B' }}
-                                            />Inactive
+                                        <div className="splitrows">
+                                            <div className="halfcontent">
+                                                <label>First Name</label>
+                                                <input type="text" class="form-control" required/>
+                                            </div>
+                                            <div className="halfcontent">
+                                                <label>Last Name</label>
+                                                <input type="text" class="form-control" required/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                    
+                                    <div class="form-group">
+                                        <div className="splitrows">
+                                            <div className="halfcontent">
+                                                <label>Date Of Birth</label>
+                                                <div class="input-group-icon">
+                                                    <input class="form-control js-datepicker" type="text" name="birthday"/>
+                                                    <span class="input-group-addon"><i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i></span>
+                                    
+                                                </div>
+                                            </div>
+                                            <div className="halfcontent">
+                                                <label>Gender</label>
+                                                <div>
+                                                    <Radio
+                                                        checked={selectedValue === 'a'}
+                                                        onChange={handleChange}
+                                                        value="a"
+                                                        name="radio-button-demo"
+                                                        label="Male"
+                                                        inputProps={{ 'aria-label': 'A' }}
+                                                    />Male
+                                                    <Radio
+                                                        checked={selectedValue === 'b'}
+                                                        onChange={handleChange}
+                                                        value="b"
+                                                        name="radio-button-demo"
+                                                        inputProps={{ 'aria-label': 'B' }}
+                                                    />Female
 
                                         </div>
-                                    </div>					
-                                    <div class="form-group">
-                                        <label>Name</label>
-                                        <input type="text" class="form-control" required/>
+                                            </div>
+                                        </div>
+                                        
                                     </div>
+
                                     <div class="form-group">
-                                        <label>Email</label>
-                                        <input type="email" class="form-control" required/>
+                                        <div className="splitrows">
+                                            <div className="halfcontent">
+                                                <label>Email</label>
+                                                <input type="email" class="form-control" required/>
+                                            </div>
+                                            <div className="halfcontent">
+                                                <label>Phone</label>
+                                                <input type="number" class="form-control" required/>
+                                            </div>
+                                        </div>
                                     </div>
+
+                                    <div class="form-group">
+                                        <div className="splitrows">
+                                            <div className="halfcontent">
+                                                <label>Student Name</label>
+                                                <input type="text" class="form-control" required/>
+                                            </div>
+                                            <div className="halfcontent">
+                                                <label>Enrollment Number</label>
+                                                <input type="text" class="form-control" required/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
                                     <div class="form-group">
                                         <label>Address</label>
                                         <textarea class="form-control" required></textarea>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Phone</label>
-                                        <input type="text" class="form-control" required/>
-                                    </div>					
+                                
+                                                        
                                 </div>
+                                
+
                                 <div class="modal-footer">
                                     <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"/>
-                                    <input type="submit" class="btn btn-color" value="Save"/>
+                                    <input type="submit" class="btn btn-color" value="Update"/>
                                 </div>
                             </form>
                         </div>

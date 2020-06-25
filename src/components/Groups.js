@@ -86,12 +86,7 @@ class Class  extends React.Component {
                         <div class="table-wrapper">
                             <div class="table-title classtabletitle">
                                 <div class="row">
-                                    <div class="col-sm-5">
-                                        <h2><b>Student</b></h2>
-                                    </div>
-                                    <div class="col-sm-7">
-                                        
-                                        <a href="#addStudentModal" class="btn btn-color" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Member</span></a>
+                                    <div class="col-sm-8">
                                         <div className="tablesearch">
                                             <div class="usersearch-box1">
                                                 <div class="input-group">								
@@ -115,6 +110,10 @@ class Class  extends React.Component {
                                 
                                 
                                         </div>
+                                    </div>
+                                    <div class="col-sm-4" style={{width:"100%",display:"flex",justifyContent:"space-between",paddingLeft:"0px"}}>
+                                        <a href="#addGroupModal" class="btn btn-color" data-toggle="modal"style={{width:"50%",margin:0,padding:"6px"}}><i class="material-icons">&#xE147;</i> <span>Add New Group</span></a>
+                                        <a href="#addStudentModal" class="btn btn-color" data-toggle="modal" style={{width:"50%",marginLeft:5,padding:"6px 4px 6px 4px"}}><i class="material-icons">&#xE147;</i> <span>Add New Member</span></a>
                                         
                                     </div>
                                 </div>
@@ -139,6 +138,7 @@ class Class  extends React.Component {
                                         
                                         <td>
                                             <a href="#editStudentModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -149,6 +149,7 @@ class Class  extends React.Component {
                                                                                
                                         <td>
                                             <a href="#editStudentModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -160,6 +161,7 @@ class Class  extends React.Component {
                                         
                                         <td>
                                             <a href="#editStudentModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -171,6 +173,7 @@ class Class  extends React.Component {
                                         
                                         <td>
                                             <a href="#editStudentModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                         </td>
                                     </tr>					
                                     <tr>
@@ -181,6 +184,7 @@ class Class  extends React.Component {
                                                                                
                                         <td>
                                             <a href="#editStudentModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
+                                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                                         </td>
                                     </tr> 
                                 </tbody>
@@ -206,7 +210,7 @@ class Class  extends React.Component {
                             <div class="modal-content">
                                 <form>  
                                     <div class="modal-header">						
-                                        <h4 class="modal-title">Add Student Details</h4>
+                                        <h4 class="modal-title">Add Member Details</h4>
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                     </div>
                                     <div class="modal-body">
@@ -227,11 +231,11 @@ class Class  extends React.Component {
                                         <div class="form-group">
                                             <div className="splitrows">
                                                 <div className="halfcontent">
-                                                    <label>Admission No</label>
+                                                    <label>Enrollment No</label>
                                                     <input type="text" class="form-control" required/>
                                                 </div>
                                                 <div className="halfcontent">
-                                                    <label>Current Class</label>
+                                                    <label>Current Group</label>
                                                     <input type="text" class="form-control" required/>
                                                 </div>
                                             </div>
@@ -338,13 +342,41 @@ class Class  extends React.Component {
                         </div>
                     </div>
                     
+                    <div id="addGroupModal" class="modal fade">
+                        
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <form>  
+                                    <div class="modal-header">						
+                                        <h4 class="modal-title">Add New Group</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                    </div>
+                                    <div class="modal-body">
+                                                            
+                                        <div class="form-group">
+                                            <label>Group Name</label>
+                                            <input type="text" class="form-control" required/>
+                                              
+                                        </div>
+                                        <a href="#"className="uploadexcel" style={{marginLeft:"82%"}}>Upload Excel</a>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"/>
+                                        <input type="submit" class="btn btn-color" value="Add"/>
+                                    </div>
+                                </form> 
+                            </div>
+                        </div>
+                    </div>
+
+
                     <div id="editStudentModal" class="modal fade">
                         
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <form>  
                                     <div class="modal-header">						
-                                        <h4 class="modal-title">Edit Student Details</h4>
+                                        <h4 class="modal-title">Edit Member Details</h4>
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                     </div>
                                     <div class="modal-body">
@@ -369,7 +401,7 @@ class Class  extends React.Component {
                                                     <input type="text" class="form-control" required/>
                                                 </div>
                                                 <div className="halfcontent">
-                                                    <label>Current Class</label>
+                                                    <label>Current Group</label>
                                                     <input type="text" class="form-control" required/>
                                                 </div>
                                             </div>
@@ -474,37 +506,29 @@ class Class  extends React.Component {
                         
                         </div>
                     </div>
-                    
                     <div id="deleteEmployeeModal" class="modal fade">
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <form>
                                     <div class="modal-header">						
-                                        <h4 class="modal-title">Change password</h4>
+                                        <h4 class="modal-title">Delete Member</h4>
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                     </div>
                                     <div class="modal-body">					
-                                        <div class="form-group">
-                                            <label>New Password</label>
-                                            <input type="password" class="form-control" required/>
-                                        </div>
-                                        
-                                        <div class="form-group">
-                                            <label>Confirm Password</label>
-                                            <input type="password" class="form-control" id="myInput" required/>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="checkbox" />  Show Password
-                                        </div>					
+                                        <p>Are you sure you want to delete this member?</p>
+                                        <p class="text-warning"><small>This action cannot be undone.</small></p>
                                     </div>
                                     <div class="modal-footer">
                                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"/>
-                                        <input type="submit" class="btn btn-info" value="Save"/>
+                                        <input type="submit" class="btn btn-danger" value="Delete"/>
                                     </div>
                                 </form>
                             </div>
                         </div>
                     </div>
+
+                    
+                    
 
                 </div>
             </div>
