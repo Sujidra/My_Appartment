@@ -198,7 +198,7 @@ const Users =(props)=>{
                                             <div className="halfcontent">
                                                 <label for="sel1">Current Group</label>
                                                 
-                                                <select /*className="selectpicker"*/ class="form-control" onChange={(e)=>{changeClass(e.target.value);console.log(classSelected)}} value={classSelected}>
+                                                <select className="selectpicker" /*class="form-control"*/ onChange={(e)=>{changeClass(e.target.value);console.log(classSelected)}} value={classSelected}>
                                                     <option  value="select">Select</option>
                                                     <option value="6">6</option>
                                                     <option value="7">7</option>

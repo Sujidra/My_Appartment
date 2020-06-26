@@ -5,7 +5,7 @@ const Conversation =() =>{
         <div  className="conversation">
             <img src="/images/person1.jpg" className="convoimg"style={{}}></img>
             <div className="textbox">
-                 <input placeholder="Start a Conversation, poll or share Photos" className="text" type="text" ></input>
+                 <input placeholder="Start a Conversation, poll or share Photos" className="textletters" type="text" ></input>
        
             </div>
         </div>

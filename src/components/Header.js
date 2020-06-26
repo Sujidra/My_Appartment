@@ -52,7 +52,7 @@ const Header =(props)=>{
                     <div class="dropdown" style={{marginTop:"9px",paddingLeft:"3px"}}>
                         <a href="#" class="dropdown-toggle" style={{color:"white"}} data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <span class="caret">  </span></a>
                         <ul class="dropdown-menu" style={{padding:"0",marginTop:"9px",maxWidth:"70px"}}>
-                            <li className="dropdownLi" style={{background:"#f1f1f1",margin:0,minWidth:"70px",height:"40px",paddingLeft:"50px",fontSize:"15px"}}><a href="#"style={{paddingLeft:"10px",paddingTop:"5px"}}>Logout</a></li>
+                            <li className="dropdownLi" style={{background:"#f1f1f1",margin:0,minWidth:"70px",height:"40px",paddingLeft:"50px"}}><a href="#"style={{paddingLeft:"10px",paddingTop:"7px",display:"inline-block",fontSize:"17px"}}>Logout</a></li>
                         </ul>
                     </div>
 

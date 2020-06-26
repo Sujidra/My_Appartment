@@ -17,11 +17,11 @@ const AppPage = (props)=> {
       <div>
 
         <div className={props.scroll?"headnav":"headernavOnScroll"}>
-                <NavLink to="/conversation" className="nav" activeClassName="active" >Conversations</NavLink>
-                <NavLink to="/groups" className="nav" activeClassName="active">Circles</NavLink>
-                <NavLink to="/photos" className="nav" activeClassName="active">Album</NavLink>
-                <NavLink to="/discover" className="nav" activeClassName="active">Discover</NavLink>
-                <NavLink to="/polls" className="nav" activeClassName="active">Polls</NavLink>
+                <NavLink to="/conversation" className="nav" activeClassName="activesubhead" >Conversations</NavLink>
+                <NavLink to="/groups" className="nav" activeClassName="activesubhead">Circles</NavLink>
+                <NavLink to="/photos" className="nav" activeClassName="activesubhead">Album</NavLink>
+                <NavLink to="/discover" className="nav" activeClassName="activesubhead">Discover</NavLink>
+                <NavLink to="/polls" className="nav" activeClassName="activesubhead">Polls</NavLink>
                 
         </div>
 

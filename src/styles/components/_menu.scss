@@ -56,20 +56,35 @@
     transition: all 0.25s linear;
 }
 
+.appnav ul{
+    list-style-type: none;
+    padding-left: 0rem;
+    margin: 0;
+    height: auto;
+}
+
 ul{
     list-style-type: none;
     padding-left: 0rem;
     margin: 0;
     height: auto;
 }
-ul li{
+.appnav ul li{
 width:100%;
 margin-top: 3px;
 height: 53px;
 padding-top:11;  
+    
 //border-bottom: 1px solid #3333331e;  
 //border-right: 1px solid  #3333331e;   
 }
+
+ul li{
+    width:100%;
+    //border-bottom: 1px solid #3333331e;  
+    //border-right: 1px solid  #3333331e;   
+}
+
 ul li:hover{
     
     
@@ -93,7 +108,7 @@ ul li:hover{
                      
 }
 
-li:hover .navtitle{
+.appnav li:hover .navtitle{
     color: $theme-color;
     font-weight: 500;
 }
