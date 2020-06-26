@@ -9,21 +9,21 @@ const Users =(props)=>{
     $(document).ready(function(){
         // Activate tooltip
         $('[data-toggle="tooltip"]').tooltip();
+        $('.selectpicker').selectpicker();
+        $('#student').selectpicker('refresh');
+
         
     });
     const [selectedValue, setSelectedValue] = React.useState('a');
     const [classSelected,changeClass]=React.useState("select");
+    const [nameSelected,changeName]=React.useState("");
 
     
     const handleChange = (event) => {
     setSelectedValue(event.target.value);
     };
 
-    const ClassHandle = (event) => {
-        changeClass(event.target.value);
-        setTimeout(()=>{console.log(classSelected);},0.5)
-        
-    };
+    
     let studentoptions=[]
     if(classSelected==="select"){
         studentoptions=["","","",""]
@@ -210,11 +210,11 @@ const Users =(props)=>{
                                             </div>
                                             <div className="halfcontent">
                                                 <label>Student Name</label>
-                                                <select class="form-control" id="student" /*onChange={(e)=>{changeClass(e.target.value);console.log(classSelected)}} value={classSelected}*/>
-                                                    <option value={`${studentoptions[0]}`}>{`${studentoptions[0]}`}</option>
-                                                    <option value={`${studentoptions[1]}`}>{`${studentoptions[1]}`}</option>
-                                                    <option value={`${studentoptions[2]}`}>{`${studentoptions[2]}`}</option>
-                                                    <option value={`${studentoptions[3]}`}>{`${studentoptions[3]}`}</option>
+                                                <select className="selectpicker"  id="student" onChange={(e)=>{changeName(e.target.value);console.log(nameSelected)}} value={nameSelected}>
+                                                    <option value={`${studentoptions[0]}`}>{studentoptions[0]}</option>
+                                                    <option value={`${studentoptions[1]}`}>{studentoptions[1]}</option>
+                                                    <option value={`${studentoptions[2]}`}>{studentoptions[2]}</option>
+                                                    <option value={`${studentoptions[3]}`}>{studentoptions[3]}</option>
                                                     
                                                 </select>
                                             </div>
