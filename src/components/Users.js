@@ -39,7 +39,7 @@ const Users =(props)=>{
     }else if(classSelected==="9"){
         studentoptions=["Madhu","Kanishka","Rahul","Manohar"]
 
-    }else if(classSelected==="7"){
+    }else if(classSelected==="10"){
         studentoptions=["Dinesh","Kannen","Annapoorani","Sindhu"]
 
     }
