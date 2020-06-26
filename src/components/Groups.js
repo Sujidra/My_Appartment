@@ -16,6 +16,11 @@ const delimiters = [KeyCodes.comma, KeyCodes.enter];
 class Class  extends React.Component {
     constructor(props) {
         super(props);
+
+        $(document).ready(function () {
+            $('.selectpicker').selectpicker();
+          });
+        
  
         this.state = {
             tags: [
@@ -66,6 +71,8 @@ class Class  extends React.Component {
     this.setState({selectedValue:event.target.value});
     }
 
+  
+
       
       //$(multiInput.getValues().join(' and '))
 
@@ -112,7 +119,7 @@ class Class  extends React.Component {
                                         </div>
                                     </div>
                                     <div class="col-sm-4" style={{width:"100%",display:"flex",justifyContent:"space-between",paddingLeft:"0px"}}>
-                                        <a href="#addGroupModal" class="btn btn-color" data-toggle="modal"style={{width:"50%",margin:0,padding:"6px"}}><i class="material-icons">&#xE147;</i> <span>Add New Group</span></a>
+                                        <a href="#addGroupModal" class="btn btn-color" data-toggle="modal"style={{width:"50%",margin:0,padding:"6px 4px 6px 4px"}}><i class="material-icons">&#xE147;</i> <span>Create New Group</span></a>
                                         <a href="#addStudentModal" class="btn btn-color" data-toggle="modal" style={{width:"50%",marginLeft:5,padding:"6px 4px 6px 4px"}}><i class="material-icons">&#xE147;</i> <span>Add New Member</span></a>
                                         
                                     </div>
@@ -348,7 +355,7 @@ class Class  extends React.Component {
                             <div class="modal-content">
                                 <form>  
                                     <div class="modal-header">						
-                                        <h4 class="modal-title">Add New Group</h4>
+                                        <h4 class="modal-title">Create New Group</h4>
                                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                     </div>
                                     <div class="modal-body">
@@ -362,7 +369,7 @@ class Class  extends React.Component {
                                     </div>
                                     <div class="modal-footer">
                                         <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel"/>
-                                        <input type="submit" class="btn btn-color" value="Add"/>
+                                        <input type="submit" class="btn btn-color" value="Create"/>
                                     </div>
                                 </form> 
                             </div>

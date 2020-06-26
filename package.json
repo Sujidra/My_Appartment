@@ -28,6 +28,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "bootstrap": "^4.0.0",
+    "bootstrap-select": "^1.13.17",
     "chalk": "^4.0.0",
     "classlist.js": "^1.1.20150312",
     "css-loader": "^0.28.4",
